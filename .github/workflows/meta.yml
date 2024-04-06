@@ -1,9 +1,7 @@
 name: Meta Image
+
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - "master"
 
 jobs:
   docker:
