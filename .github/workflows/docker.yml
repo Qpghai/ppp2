@@ -1,10 +1,16 @@
-name: docker image
+name: docker Image
+
 on:
+  push:
+    branches:
+      - "master"
+      - "main"
   workflow_dispatch:
-    
+
 jobs:
   docker:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
