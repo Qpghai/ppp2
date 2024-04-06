@@ -3,7 +3,6 @@ name: docker Image
 on:
   push:
     branches:
-      - "master"
       - "main"
   workflow_dispatch:
 
