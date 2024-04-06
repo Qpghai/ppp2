@@ -2,7 +2,7 @@ FROM rebecca554owen/openppp2:meta as builder
 # 编译 OpenPPP2 
 WORKDIR /app
 RUN apt-get update \
-    && git clone --single-branch --branch main https://github.com/rebecca554owen/openppp2 . \
+    && git clone --single-branch --branch main https://github.com/liulilittle/openppp2 . \
     && mkdir build \
     && cd build \
     && cmake .. -DCMAKE_BUILD_TYPE=Release \
