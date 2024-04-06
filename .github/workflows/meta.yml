@@ -1,4 +1,4 @@
-name: Meta Image
+name: meta Image
 
 on:
   workflow_dispatch:
