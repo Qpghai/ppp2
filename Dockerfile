@@ -12,7 +12,7 @@ RUN apt-get update \
 # 构建 OpenPPP2 镜像    
 FROM ubuntu:latest
 WORKDIR /app
-COPY --from=builder /app/build/bin/ /app/ppp/
+COPY --from=builder /app/bin/ppp /app/
 # 安装必要的工具包
 RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
