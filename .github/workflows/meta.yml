@@ -1,5 +1,4 @@
 name: Meta Image
-
 on:
   workflow_dispatch:
 
