@@ -1,4 +1,4 @@
-FROM openppp2:meta as builder 
+FROM rebecca554owen/openppp2:meta as builder 
 # 编译 OpenPPP2 
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
