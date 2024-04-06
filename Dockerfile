@@ -1,8 +1,8 @@
 FROM rebecca554owen/openppp2:meta as builder 
 # 编译 OpenPPP2 
 WORKDIR /app
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    git clone --single-branch --branch main https://github.com/liulilittle/openppp2 . \
+RUN apt-get update \
+    && git clone --single-branch --branch main https://github.com/liulilittle/openppp2 . \
     && mkdir build \
     && cd build \
     && cmake .. -DCMAKE_BUILD_TYPE=Release \
