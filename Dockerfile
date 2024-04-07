@@ -1,7 +1,10 @@
 FROM rebecca554owen/openppp2:meta as builder 
 # 编译 OpenPPP2 
+ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
-RUN apt-get update \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    iptables \
+    iproute2 \
     && git clone --single-branch --branch main https://github.com/liulilittle/openppp2 . \
     && mkdir build \
     && cd build \
@@ -17,9 +20,8 @@ COPY --from=builder /app/bin/ppp /app/
 RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
     iptables \
-    dnsutils \
     iproute2 \
-    net-tools \
+    dnsutils \
     iputils-ping \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
