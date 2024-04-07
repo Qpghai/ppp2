@@ -39,7 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: |
-           linux/amd64
+           linux/amd64,linux/arm64
           push: true
           tags: |
             ${{ env.REPO_NAME }}:${{ steps.get_version.outputs.version }}
